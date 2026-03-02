@@ -6,68 +6,83 @@
 <title>Import Japon | Repuestos Originales</title>
 
 <style>
-body {
-    margin: 0;
+body{
+    margin:0;
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background:#f4f4f4;
 }
 
-header {
-    background: #4b0f1f;
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
+header{
+    background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1503376780353-7e6692767b70');
+    background-size:cover;
+    background-position:center;
+    color:white;
+    text-align:center;
+    padding:100px 20px;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 40px;
+header h1{
+    font-size:48px;
+    margin:0;
 }
 
-header p {
-    margin-top: 10px;
-    font-size: 18px;
+header p{
+    font-size:20px;
+    margin:15px 0 30px;
 }
 
-.section {
-    padding: 40px 20px;
-    text-align: center;
+.button{
+    background:#6b0f1a;
+    color:white;
+    padding:15px 30px;
+    text-decoration:none;
+    border-radius:5px;
+    font-weight:bold;
 }
 
-.products {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+.section{
+    padding:60px 20px;
+    text-align:center;
 }
 
-.card {
-    background: white;
-    padding: 20px;
-    width: 250px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+.section h2{
+    margin-bottom:40px;
+    font-size:32px;
 }
 
-.card h3 {
-    margin-top: 0;
+.grid{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
 }
 
-.button {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background: #4b0f1f;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+.card{
+    background:white;
+    padding:25px;
+    width:280px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
 
-footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 20px;
+.steps{
+    background:#6b0f1a;
+    color:white;
+}
+
+.steps ol{
+    max-width:600px;
+    margin:auto;
+    text-align:left;
+    line-height:1.8;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
 }
 </style>
 </head>
@@ -76,30 +91,59 @@ footer {
 
 <header>
     <h1>IMPORT JAPON</h1>
-    <p>Repuestos Originales Nissan, Toyota y Mitsubishi</p>
+    <p>Repuestos originales Nissan, Toyota y Mitsubishi</p>
+    <a class="button" href="https://wa.me/57TU_NUMERO_AQUI">Cotiza ahora por WhatsApp</a>
 </header>
 
 <section class="section">
-    <h2>Nuestros Productos</h2>
-    <div class="products">
+    <h2>¿Por qué elegirnos?</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Garantía Real</h3>
+            <p>Todos nuestros repuestos son verificados y garantizados.</p>
+        </div>
+        <div class="card">
+            <h3>Envíos Nacionales</h3>
+            <p>Despachamos a toda Colombia de forma rápida y segura.</p>
+        </div>
+        <div class="card">
+            <h3>Stock Disponible</h3>
+            <p>Amplio inventario en repuestos eléctricos y mecánicos.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2>Productos Destacados</h2>
+    <div class="grid">
         <div class="card">
             <h3>Alternadores</h3>
-            <p>Originales y garantizados.</p>
+            <p>Originales y listos para instalar.</p>
         </div>
         <div class="card">
             <h3>Arranques</h3>
-            <p>Disponibles para múltiples modelos.</p>
+            <p>Compatibles con múltiples modelos.</p>
         </div>
         <div class="card">
-            <h3>Repuestos Eléctricos</h3>
-            <p>Nuevos y usados en excelente estado.</p>
+            <h3>Sensores y Módulos</h3>
+            <p>Componentes eléctricos nuevos y usados.</p>
         </div>
     </div>
-    <a class="button" href="https://wa.me/57TU_NUMERO_AQUI">Contáctanos por WhatsApp</a>
+</section>
+
+<section class="section steps">
+    <h2>¿Cómo comprar?</h2>
+    <ol>
+        <li>Envíanos el modelo y año de tu vehículo por WhatsApp.</li>
+        <li>Recibe tu cotización inmediata.</li>
+        <li>Realiza el pago.</li>
+        <li>Recibe tu repuesto en tu ciudad.</li>
+    </ol>
 </section>
 
 <footer>
-    © 2026 Import Japon - Todos los derechos reservados
+    <p>© 2026 Import Japon</p>
+    <p>Bogotá, Colombia</p>
 </footer>
 
 </body>
