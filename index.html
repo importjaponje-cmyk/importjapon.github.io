@@ -4,8 +4,141 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Import Japon | Repuestos Originales</title>
-<link rel="stylesheet" href="style.css">
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
+}
+
+header{
+    background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('https://i.pinimg.com/736x/61/31/0f/61310f2206604b5b7262e46b76ce4116.jpg');
+    background-size:cover;
+    background-position:center;
+    color:white;
+    text-align:center;
+    padding:100px 20px;
+}
+
+header h1{
+    font-size:48px;
+    margin:0;
+}
+
+header p{
+    font-size:20px;
+    margin:15px 0 30px;
+}
+
+.button{
+    background:#6b0f1a;
+    color:white;
+    padding:15px 30px;
+    text-decoration:none;
+    border-radius:5px;
+    font-weight:bold;
+}
+
+.section{
+    padding:60px 20px;
+    text-align:center;
+}
+
+.section h2{
+    margin-bottom:40px;
+    font-size:32px;
+}
+
+.grid{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    width:280px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.steps{
+    background:#6b0f1a;
+    color:white;
+}
+
+.steps ol{
+    max-width:600px;
+    margin:auto;
+    text-align:left;
+    line-height:1.8;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+}
+
+.marcas {
+  padding: 60px 20px;
+  text-align: center;
+  background: #f5f5f5;
+}
+
+.marcas h2 {
+  margin-bottom: 40px;
+}
+
+.marca-card {
+  background: white;
+  margin: 20px auto;
+  padding: 20px;
+  width: 280px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.marca-card:hover {
+  transform: scale(1.05);
+}
+
+.marca-card img {
+  width: 80px;
+  margin-bottom: 15px;
+}
+
+.submenu {
+  display: none;
+  margin-bottom: 30px;
+}
+
+.categoria {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 20px;
+  background: #800020; /* vino tinto */
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.categoria:hover {
+  background: #a0002a;
+
+}
+    
+</style>
 </head>
+
 <body>
 
 <header>
@@ -14,13 +147,88 @@
     <a class="button" href="https://wa.me/573108557043">Cotiza ahora por WhatsApp</a>
 </header>
 
-<section class="buscador">
-    <input type="text" id="searchInput" placeholder="Buscar repuesto por marca, categoría o nombre...">
-</section>
-
+.contenedor-marcas {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;    
+    
 <section class="marcas">
   <h2>Repuestos por Marca</h2>
-  <div class="grid" id="catalogo"></div>
+
+  <div class="marca-card" onclick="toggleMenu('toyota')">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Toyota_black_logo.png" alt="Toyota">
+    <h3>Toyota</h3>
+  </div>
+
+  <div id="toyota" class="submenu">
+    <div class="categoria">Eléctrico</div>
+    <div class="categoria">Suspensión</div>
+    <div class="categoria">Motor</div>
+    <div class="categoria">Freno</div>
+  </div>
+
+  <div class="marca-card" onclick="toggleMenu('nissan')">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/23/Nissan_2020_logo.svg" alt="Nissan">
+    <h3>Nissan</h3>
+  </div>
+
+  <div id="nissan" class="submenu">
+    <div class="categoria">Eléctrico</div>
+    <div class="categoria">Suspensión</div>
+    <div class="categoria">Motor</div>
+    <div class="categoria">Freno</div>
+  </div>
+
+  <div class="marca-card" onclick="toggleMenu('mitsubishi')">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Mitsubishi_logo.svg" alt="Mitsubishi">
+    <h3>Mitsubishi</h3>
+  </div>
+
+  <div id="mitsubishi" class="submenu">
+    <div class="categoria">Eléctrico</div>
+    <div class="categoria">Suspensión</div>
+    <div class="categoria">Motor</div>
+    <div class="categoria">Freno</div>
+  </div>
+
+</section>
+    
+</section>    
+<section class="section">
+    <h2>¿Por qué elegirnos?</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Garantía Real</h3>
+            <p>Todos nuestros repuestos son verificados y garantizados.</p>
+        </div>
+        <div class="card">
+            <h3>Envíos Nacionales</h3>
+            <p>Despachamos a toda Colombia de forma rápida y segura.</p>
+        </div>
+        <div class="card">
+            <h3>Stock Disponible</h3>
+            <p>Amplio inventario en repuestos eléctricos y mecánicos.</p>
+        </div>
+    </div>
+</section>
+    
+<section class="section">
+    <h2>Productos Destacados</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Alternadores</h3>
+            <p>Originales y listos para instalar.</p>
+        </div>
+        <div class="card">
+            <h3>Arranques</h3>
+            <p>Compatibles con múltiples modelos.</p>
+        </div>
+        <div class="card">
+            <h3>Sensores y Módulos</h3>
+            <p>Componentes eléctricos nuevos y usados.</p>
+        </div>
+    </div>
 </section>
 
 <section class="section steps">
@@ -38,154 +246,16 @@
     <p>Bogotá, Colombia</p>
 </footer>
 
-<script src="script.js"></script>
+<script>
+function toggleMenu(id) {
+  var menu = document.getElementById(id);
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+  } else {
+    menu.style.display = "block";
+  }
+}
+</script>    
+    
 </body>
 </html>
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
-}
-
-/* HEADER */
-header {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-    url('https://i.pinimg.com/736x/61/31/0f/61310f2206604b5b7262e46b76ce4116.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
-}
-header h1 { font-size: 48px; margin: 0; }
-header p { font-size: 20px; margin: 15px 0 30px; }
-.button {
-    background: #6b0f1a;
-    color: white;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-/* BUSCADOR */
-.buscador {
-    text-align: center;
-    padding: 20px;
-}
-.buscador input {
-    width: 80%;
-    padding: 12px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-/* SECCIONES */
-.section { padding: 60px 20px; text-align: center; }
-.section h2 { margin-bottom: 40px; font-size: 32px; }
-.grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-}
-.card {
-    background: white;
-    padding: 25px;
-    width: 280px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    text-align: center;
-}
-.card img {
-    width: 100%;
-    height: 150px;
-    object-fit: contain;
-    margin-bottom: 15px;
-}
-.card button {
-    background: #800020;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.card button:hover { background: #a0002a; }
-
-/* FOOTER */
-footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 30px 20px;
-}
-
-// Cargar catálogo desde JSON
-async function cargarCatalogo() {
-  const response = await fetch("repuestos.json");
-  const data = await response.json();
-  mostrarCatalogo(data);
-
-  // Buscador
-  document.getElementById("searchInput").addEventListener("input", function() {
-    const filtro = this.value.toLowerCase();
-    const filtrados = data.filter(item =>
-      item.marca.toLowerCase().includes(filtro) ||
-      item.categoria.toLowerCase().includes(filtro) ||
-      item.nombre.toLowerCase().includes(filtro)
-    );
-    mostrarCatalogo(filtrados);
-  });
-}
-
-// Mostrar catálogo en pantalla
-function mostrarCatalogo(lista) {
-  const contenedor = document.getElementById("catalogo");
-  contenedor.innerHTML = "";
-  lista.forEach(item => {
-    const card = document.createElement("div");
-    card.className = "card";
-    card.innerHTML = `
-      <img src="${item.imagen}" alt="${item.nombre}">
-      <h3>${item.nombre}</h3>
-      <p><strong>Marca:</strong> ${item.marca}</p>
-      <p><strong>Categoría:</strong> ${item.categoria}</p>
-      <button onclick="cotizar('${item.nombre}', '${item.marca}')">Cotizar</button>
-    `;
-    contenedor.appendChild(card);
-  });
-}
-
-// Botón de cotización vía WhatsApp
-function cotizar(nombre, marca) {
-  const mensaje = `Hola, quiero cotizar el repuesto: ${nombre} de la marca ${marca}`;
-  const url = `https://wa.me/573108557043?text=${encodeURIComponent(mensaje)}`;
-  window.open(url, "_blank");
-}
-
-cargarCatalogo();
-
-[
-  {
-    "marca": "Toyota",
-    "categoria": "Motor",
-    "nombre": "Alternador Corolla 2015",
-    "imagen": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Alternator.jpg"
-  },
-  {
-    "marca": "Nissan",
-    "categoria": "Suspensión",
-    "nombre": "Amortiguador Sentra 2018",
-    "imagen": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Car_shock_absorber.jpg"
-  },
-  {
-    "marca": "Mitsubishi",
-    "categoria": "Eléctrico",
-    "nombre": "Sensor ABS Lancer 2017",
-    "imagen": "https://upload.wikimedia.org/wikipedia/commons/6/6a/ABS_sensor.jpg"
-  }
-]
-
-
