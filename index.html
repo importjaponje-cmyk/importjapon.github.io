@@ -130,16 +130,11 @@ footer{
   cursor: pointer;
   transition: 0.3s;
 }
-
-.categoria:hover {
-  background: #a0002a;
-
-    .contenedor-marcas {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;    
-
+.contenedor-marcas{
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
 }
     
 </style>
@@ -156,6 +151,8 @@ footer{
 <section class="marcas">
   <h2>Repuestos por Marca</h2>
 
+<div class="contenedor-marcas">
+    
   <div class="marca-card" onclick="toggleMenu('toyota')">
     <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Toyota_black_logo.png" alt="Toyota">
     <h3>Toyota</h3>
@@ -192,8 +189,6 @@ footer{
     <div class="categoria">Freno</div>
   </div>
 
-</section>
-    
 </section>    
 <section class="section">
     <h2>¿Por qué elegirnos?</h2>
