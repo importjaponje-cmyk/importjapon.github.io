@@ -133,10 +133,22 @@ footer{
     
 .marca-container{
 display:flex;
-flex-direction:row;
+flex-direction:column;
 align-items:center;
-gap: 15px;    
 width:280px;
+}
+
+.submenu{
+display:none;
+margin-top:15px;
+text-align:center;
+}
+
+.contenedor-marcas{
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
 }
 
 .submenu{
@@ -158,6 +170,8 @@ text-align:center;
     
 <section class="marcas">
 <h2>Repuestos por Marca</h2>
+
+    <div class="contenedor-marcas">
 
 <div class="marca-container">
 
